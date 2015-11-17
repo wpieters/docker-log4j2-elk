@@ -22,6 +22,6 @@ Feel free to run it locally by itself as well and just mount the volume where yo
 
 `docker run -d -p 8080:80 -p 7000:7000 -p 5959:5959 -v /path/to/your/conf:/etc/logstash duhblinn/log4j2-elk`
 
-This will load the config in the `conf` folder which exposes the log4j2 and tcp ports. Please make sure that the folder is accesible to Docker, which on Linux should be anywhere, but on OS X it needs to be somewhere under `/Users/Shared/`
+This will load the config in the `conf` folder. Please make sure that the folder is accesible to Docker, which on Linux should be anywhere, but on OS X it needs to be somewhere under `/Users/Shared/` or `~`.
 
-You will of course need to expose and map any additional ports yourself in that command.
+You will of course need to expose and map any additional ports yourself in that command, and if you have additional plugins you need, you will have to base your image of mine and add those RUN commands.
